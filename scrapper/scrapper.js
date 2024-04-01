@@ -57,7 +57,7 @@ async function main(){
 
     json = JSON.stringify(items, null, 2);
     
-    fs.writeFileSync('./data.json', json, { flag: 'w+' });
+    fs.writeFileSync('../data.json', json, { flag: 'w+' });
 }
 
 main();
