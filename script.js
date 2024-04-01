@@ -1,10 +1,11 @@
+//construct the cards data using appropriate tags
 function renderCards(selectedAreas) {
     var main = document.getElementById("main_div");
     main.innerHTML = '';
 
     for (let area in jsonData){
+        //pass an empty array when not filtering
         if (selectedAreas.length != 0 && !selectedAreas.includes(area)) {
-            // console.log(`skipping ${area}`)
             continue;
         }
 
@@ -70,10 +71,12 @@ function renderCards(selectedAreas) {
     }
 }
 
+//shows the div containing researcher details
 function openDetails(card) {
     details = card.querySelector('.details');
     details.classList.add("visible");
 
+    //decides if the div opens to the right or left side, responsive on resize
     var dir = window.innerWidth - card.getBoundingClientRect().right;
     if (dir < card.getBoundingClientRect().width) {
         details.classList.remove("right");
@@ -84,11 +87,13 @@ function openDetails(card) {
     };
 }
 
+//hides the div containing researcher details
 function closeDetails(card) {
     details = card.querySelector('.details');
     details.classList.remove("visible");
 }
 
+//dinamically construct the area filter checkbox
 async function loadFilter() {
     const filter = document.getElementById('area_filter');
 
@@ -108,14 +113,12 @@ async function loadFilter() {
         const span = document.createElement('span');
         span.classList.add('checkmark');
 
-        // Adiciona o label e o input ao container
         label.appendChild(input)
-
         filter.appendChild(label);
-        // filter.appendChild(document.createElement('br'));
     }
 }
 
+//get the selected areas from the checkbox to send to the cards render function
 function renderSelected() {
     const filter = document.getElementById('area_filter');
     const inputs = filter.querySelectorAll('input');
@@ -129,21 +132,22 @@ function renderSelected() {
     });
 
     renderCards(selectedAreas);
-    // console.log(selectedAreas);
 }
 
+//loads the JSON file
 async function loadJson() {
     try {
         const res = await fetch('./data.json');
         jsonData = await res.json();
-        // loadCards(research_areas);
     } catch (error) {
         console.error('Erro ao carregar os pesquisadores:', error);
     }
 }
 
+//initialize de global data object
 var jsonData = {};
 
+//on window load, construct the structures
 window.onload = async () => {
     await loadJson();
     await loadFilter();
