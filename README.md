@@ -1,8 +1,8 @@
 # Projeto: Remake de site/app web
 ![Screenshot do projeto](https://github.com/elc1090/project1-2024a-mrtrevisan/blob/main/image.png "Screenshot do projeto")
 
-#### Acesso:  
-<a href="https://elc1090.github.io/project1-2024a-mrtrevisan" target="_blank">Github Pages</a>
+#### Acesso: Github Pages 
+https://elc1090.github.io/project1-2024a-mrtrevisan
 
 #### Desenvolvedor
 Mauro Roberto Machado Trevisan - Ciência da Computação
