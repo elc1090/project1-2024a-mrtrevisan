@@ -2,7 +2,7 @@
 ![Screenshot do projeto](https://github.com/elc1090/project1-2024a-mrtrevisan/blob/main/image.png "Screenshot do projeto")
 
 #### Acesso:  
-https://elc1090.github.io/project1-2024a-mrtrevisan/
+<a href="https://elc1090.github.io/project1-2024a-mrtrevisan" target="_blank">Github Pages</a>
 
 #### Desenvolvedor
 Mauro Roberto Machado Trevisan - Ciência da Computação
