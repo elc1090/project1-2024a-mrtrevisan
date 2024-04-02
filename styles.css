@@ -48,17 +48,13 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
   padding: 20px;
   margin: 10px;
-
   width: fit-content;
   position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   transition: transform 0.3s ease-in-out; 
   z-index: 1;
 }
@@ -67,7 +63,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   z-index: inherit;
 }
 
@@ -88,30 +83,22 @@ body {
 .details {
   display: none;
   position: absolute;
-
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-
   width: auto;
   height: inherit;
-
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
   background: white;
-
   z-index: -1;
-
   align-items: center;
   text-align: center;    
   font-size: 18px;  
-
   overflow-y: scroll;
-
   transition: ease-in-out 0.3s;
 }
 
@@ -185,10 +172,17 @@ body {
 } 
 
 .filter_item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 10px;
+  padding: 5px;
   display: flex;
   justify-content: center;
+  transition: transform 0.3s ease-in-out; 
 }
 
 .filter_item:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
